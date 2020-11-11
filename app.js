@@ -13,5 +13,9 @@ app.use(cookieParser());
 
 app.post('/login',login);
 app.post('/refresh',refresh);
-app.get('/comments',verify,routeHandler);
+app.get('/comments',verify);
+
+app.listen(3000,'localhost',()=>{
+    console.log(`Server start`);
+});
 
